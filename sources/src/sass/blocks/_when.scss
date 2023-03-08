@@ -1,0 +1,18 @@
+.when {
+  margin: 0 0 rem(145);
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__inner {
+    max-width: rem(1026);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    column-gap: rem(39);
+  }
+  &__content {
+    padding-top: rem(133);
+  }
+}

@@ -1,0 +1,31 @@
+.seeyou {
+  position: relative;
+  z-index: 2;
+  padding: rem(211) 0 rem(80);
+  &__wrapper {
+    padding-left: rem(107);
+  }
+  h2 {
+    color: white;
+    font-size: rem(60);
+    line-height: math.div(66 , 60);
+    margin: 0 0 rem(273);
+  }
+  p {
+    font-size: rem(16);
+    line-height: 120%;
+  }
+  &__blob {
+    position: absolute;
+    width: rem(1128);
+    height: rem(534);
+    top: rem(-27);
+    transform: rotate(15deg);
+    right: calc(50% - rem(300));
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

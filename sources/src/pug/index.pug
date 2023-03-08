@@ -1,0 +1,146 @@
+extends base/_layout
+block head
+    title Свабдя
+block page
+  section.welcome 
+    .container
+      .welcome__wrapper 
+        .welcome__blob
+        h1 Паша 
+          span 
+            small и
+            |  Аня
+        .welcome__time 
+          time(datetime="2023-06-16") 16.06.2023
+          p Приглашаем провести самый важный для нас день вместе
+        .welcome__more 
+          p Подробнее
+          span.welcome__arrow
+            img(src="./images/visual/arrow-more.svg", alt="Узнайте больше")
+        .star.star_left
+        .star.star_right
+        .star.star_bottom
+        .photo.photo_left 
+          img(src="./images/photos/pa.png", alt="П & А")
+        .photo.photo_right 
+          img(src="./images/photos/remember.png", alt="С теплыми воспоминаниями")
+        .photo.photo_bottom 
+          img(src="./images/photos/best.png", alt="Лучший день")
+  section.wait 
+    .container
+      .wait__wrapper
+        h2 Что нас ждет
+        p Калейдоскоп красок. Летнее яркое безумие, где можно все в пределах разумного. Вместе запечатлеем этот день на долгие года. 
+  section.when 
+    .container
+      .when__wrapper 
+        .when__inner
+          .section__content.when__content
+            h2 Когда
+            p.section__info 16 июня 2023 года в 13:00
+            p.section__alt ПЯТНИЦА
+            a.btn(href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MGcxMjc2dHExcW1mNWhscm9pcDFpNjhmamogdGhlcGFzaGk0QG0&tmsrc=thepashi4%40gmail.com", target="_blank") Добавить в календарь
+          .when__visual
+            img(src="./images/visual/calendar.png", alt="Ждем вас на мероприятие 16 июня!")
+  section.where
+    .container
+      .where__wrapper 
+        .section__content.where__content
+          h2 Где
+          p.section__info Москва, п. Рязановское, с. Остафьево 
+          p.section__alt Музей-усадьба Остафьево
+          a.btn(href="#") Проложить маршрут
+        .where__visual
+          img(src="./images/visual/ostafievo.png", alt="Музей-усадьба Остафьево")
+  section.clothes
+    .container
+      .clothes__wrapper 
+        .clothes__inner
+          .clothes__header
+            h2 Что надеть
+            p Не хотим ограничивать вас в выборе нарядов. Но будем рады, если поддержите цветовую палитру мероприятия и наденете однотонную одежду в теплых оттенках.
+          .clothes__image
+            img(src="./images/visual/rainbow.svg", alt="Maaagic")
+          .clothes__footer 
+            p Мы создали для вас доску  настроения с подходящими образами. Надеемся, она поможет вам в подготовке.
+            a.btn(href="#", target="_blank") Открыть мудборд
+  section.appeal
+    .container
+      .appeal__wrapper 
+        .appeal__header 
+          span 
+          span 
+          span 
+          span 
+          span 
+          span 
+          span 
+          span 
+          span 
+          span 
+        .appeal__body
+          .appeal__visual 
+          .appeal__inner
+            h2 Дорогие гости!
+            ol.appeal__list 
+              li.appeal__item 
+                h3.appeal__subtitle Покупать билет в Остафьево не нужно 
+                p На входе в усадьбу Остафьево 
+                  i скажите фамилию жениха
+                  | , и вас пропустят. Если вы на личном транспорте, можете оставить авто на 
+                  i бесплатной парковке 
+                  | перед главными воротами.
+              li.appeal__item 
+                h3.appeal__subtitle Не посыпайте нас ничем на регистрации и банкете 
+                p Например, рисом, лепестками или конфетти. Иначе придется заплатить 
+                  i штраф площадке 
+                  | в счет уборки. 
+              li.appeal__item 
+                h3.appeal__subtitle Пожалуйста, не дарите нам цветы
+                p Сразу же после торжества мы планируем отправиться в свадебное путешествие. Вместо букетов принесите 
+                  i ваш любимый алкогольный напиток 
+                  | или ингредиент для коктейлей. Ликер, вкусный сироп, вино — все что угодно на ваш выбор.  
+              li.appeal__item 
+                h3.appeal__subtitle Торжество пройдет за городом
+                p Наденьте 
+                  i удобную обувь и одежду
+                  | , в которой вам будет комфортно. Не забудьте принести с собой хорошее настроение 
+                  +use('cat', 46, 24)
+  section.program
+    .container
+      .program__wrapper 
+        .program__inner 
+          h2 Программа
+          ul.program__list 
+            li.program__item
+              time.program__time(datetime="2023-06-16 13:00") 13:00
+              .program__heart
+                +use('heart', 24, 22)
+              p.program__text Собираемся возле главного <br>входа в Остафьево
+            li.program__item
+              time.program__time(datetime="2023-06-16 13:30") 13:30
+              .program__heart
+                +use('heart', 24, 22)
+              p.program__text Идем на Торжественную регистрацию
+            li.program__item
+              time.program__time(datetime="2023-06-16 14:30") 14:30
+              .program__heart
+                +use('heart', 24, 22)
+              p.program__text Едем на банкет
+            li.program__item
+              time.program__time(datetime="2023-06-16 16:00") 16:00
+              .program__heart
+                +use('heart', 24, 22)
+              p.program__text Начинаем праздновать, <br>пить шампанское и веселиться
+            li.program__item
+              time.program__time(datetime="2023-06-16 23:00") 23:00
+              .program__heart
+                +use('heart', 24, 22)
+              p.program__text Собираемся домой
+  section.seeyou
+    .container 
+      .seeyou__wrapper 
+        h2 Будем рады видеть <br>вас на нашей свадьбе!
+        p Copyright © 2023 All Rights Reserved
+        .seeyou__blob
+          img(src="./images/visual/blob-end.svg", alt="Welcome!")

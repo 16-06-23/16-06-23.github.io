@@ -1,0 +1,125 @@
+.welcome {
+  padding-top: rem(180);
+  //position: relative;
+  margin: 0 0 rem(244);
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__blob {
+    position: absolute;
+    width: 93%;
+    background: linear-gradient(286.83deg, #FFCF00 7.98%, #FF7A4E 52.34%, #FF697C 92.3%);
+    border-radius: 50%;
+    top: rem(-74);
+    right: 13%;
+    filter: blur(60px);
+    transform: matrix(-0.91, 0.42, 0.42, 0.91, 0, 0);
+    z-index: -1;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 74%;
+    }
+  }
+  &__time {
+    width: 100%;
+    margin: 0 0 rem(31);
+    time {
+      font-size: rem(60);
+      line-height: math.div(66 , 60);
+      color: white;
+      margin: 0 0 rem(10);
+      display: inline-block;
+    }
+    p {
+      text-transform: uppercase;
+      color: white;
+      max-width: rem(387);
+    }
+  }
+  &__more {
+    text-transform: uppercase;
+    font-size: rem(20);
+    line-height: math.div(24 , 20);
+    letter-spacing: 0.02em;
+    color: white;
+    font-family: Lato, Arial, sans-serif;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      margin: 0 0 rem(22);
+    }
+  }
+  &__arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::before {
+      content: '';
+      width: rem(6);
+      height: rem(6);
+      background: white;
+      border-radius: 50%;
+      margin: 0 0 rem(5);
+    }
+    img {
+      width: rem(15);
+      height: rem(89);
+      transform-origin: top;
+      display: block;
+    }
+  }
+  .star {
+    position: absolute;
+    &_left {
+      top: rem(182);
+      right: calc(50% + rem(261));
+    }
+    &_right {
+      left: calc(50% + rem(160));
+      top: rem(-82);
+    }
+    &_bottom {
+      left: calc(50% + rem(274));
+      top: rem(341);
+    }
+  }
+  .photo {
+    position: absolute;
+    box-shadow: 0px 0px 22.9069px rgba(0, 0, 0, 0.1);
+    //will-change: transform;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &_left {
+      width: rem(238);
+      height: rem(290);
+      top: rem(-78);
+      left: rem(-24);
+      transform: rotate(17deg);
+    }
+    &_right {
+      width: rem(186);
+      height: rem(227);
+      top: rem(-138);
+      right: rem(150);
+      transform: rotate(12deg);
+    }
+    &_bottom {
+      width: rem(273);
+      height: rem(332);
+      top: rem(284);
+      right: rem(-80);
+      transform: rotate(-21deg);
+    } 
+  }
+}

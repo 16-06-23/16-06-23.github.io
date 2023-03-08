@@ -1,0 +1,69 @@
+@use 'sass:math';
+
+%svg-common {
+	background: url("../images/sprites/main.svg") no-repeat;
+}
+
+.svg-image-cat {
+	@extend %svg-common;
+	background-position: 0 0;
+	background-size: math.div(74, 48)*100% auto;
+	width: 48px;
+
+}
+@mixin svg-pos-image-cat {
+	background-position: 0 0;
+}
+@mixin svg-image-cat-hover {
+	.svg-image-cat {
+		@include svg-pos-image-cat-hover
+	}
+}
+
+.svg-image-cat:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(26, 48)*100%;
+}
+
+.svg-image-cat-dims {
+	width: 48px;
+	height: 26px;
+}
+
+.svg-image-heart {
+	@extend %svg-common;
+	background-position: 100% 0;
+	background-size: math.div(74, 26)*100% auto;
+	width: 26px;
+
+}
+@mixin svg-pos-image-heart {
+	background-position: 100% 0;
+}
+@mixin svg-image-heart-hover {
+	.svg-image-heart {
+		@include svg-pos-image-heart-hover
+	}
+}
+
+.svg-image-heart:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(24, 26)*100%;
+}
+
+.svg-image-heart-dims {
+	width: 26px;
+	height: 24px;
+}
+
+
+.image-by-height { width:auto; }
+.image-by-height:before { content:none; }
+.image-by-height > svg { height: inherit; }
+.image-by-height > img { height: inherit !important; vertical-align: top !important; margin: 0 !important; padding: 0 !important; max-width: none !important; max-height: none !important; border: 0 !important; opacity: 0 !important; }
