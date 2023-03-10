@@ -67,6 +67,41 @@ h1 {
     font-size: rem(100);
     line-height: math.div(110 , 100);
   }
+  @media (max-width: em(1200)){
+    font-size: rem(120);
+    span {
+      margin-left: rem(180);
+    }
+  }
+  @media (max-width: em(991)){
+    font-size: rem(90);
+    margin: 0 0 rem(36);
+    span {
+      margin-left: rem(100);
+    }
+    small {
+      font-size: rem(60);
+    }
+  }
+  @media (max-width: em(767)){
+    font-size: rem(66);
+    span {
+      margin-left: rem(80);
+    }
+    small {
+      font-size: rem(50);
+    }
+  }
+  @media (max-width: em(575)){
+    //font-size: rem(60);
+    margin: 0 0 rem(120);
+    span {
+      margin-left: rem(100);
+    }
+    small {
+      font-size: rem(42);
+    }
+  }
 }
 
 h2 {
@@ -75,11 +110,27 @@ h2 {
   color: $pink;
   margin: 0 0 rem(43);
   font-weight: 400;
+  @media (max-width: em(767)){
+    font-size: rem(48);
+    text-align: center;
+  }
+  @media (max-width: em(575)){
+    font-size: rem(42);
+  }
+  @media (max-width: em(370)){
+    font-size: rem(36);
+  }
 }
 p {
   font-size: rem(20);
   line-height: math.div(24 , 20);
   letter-spacing: 0.02em;
+  @media (max-width: em(767)){
+    font-size: rem(18);
+  }
+  @media (max-width: em(370)){
+    font-size: rem(16);
+  }
 }
 
 img {
