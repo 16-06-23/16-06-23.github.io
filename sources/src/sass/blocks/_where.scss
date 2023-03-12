@@ -6,9 +6,23 @@
     display: grid;
     grid-template-columns: 6fr 4fr;
     column-gap: rem(39);
+    @media (max-width: em(767)) {
+      grid-template-columns: 100%;
+      grid-template-rows: min-content;
+      grid-auto-rows: min-content;
+      justify-items: center;
+      row-gap: rem(40);
+    }
   }
   &__visual {
     order: -1;
+    img {
+      object-fit: contain;
+    }
+    @media (max-width: em(767)){
+      order: unset;
+      max-width: rem(530);
+    }
   }
   &__content {
     padding-top: rem(26);

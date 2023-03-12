@@ -79,9 +79,10 @@ block page
           span 
           span 
         .appeal__body
+          h2 Дорогие гости!
           .appeal__visual 
+            include ../images/visual/feast.svg
           .appeal__inner
-            h2 Дорогие гости!
             ol.appeal__list 
               li.appeal__item 
                 h3.appeal__subtitle Покупать билет в Остафьево не нужно 
@@ -109,6 +110,8 @@ block page
   section.program
     .container
       .program__wrapper 
+        .program__bg 
+          img(src="./images/visual/program-bg.svg", alt="Красивый фон")
         .program__inner 
           h2 Программа
           ul.program__list 

@@ -110,12 +110,17 @@ h2 {
   color: $pink;
   margin: 0 0 rem(43);
   font-weight: 400;
+  @media (max-width: em(991)){
+    font-size: rem(56);
+  }
   @media (max-width: em(767)){
     font-size: rem(48);
     text-align: center;
+    margin: 0 0 rem(36);
   }
   @media (max-width: em(575)){
     font-size: rem(42);
+    margin: 0 0 rem(30);
   }
   @media (max-width: em(370)){
     font-size: rem(36);
@@ -181,6 +186,9 @@ ol {
     background: $orange;
     color: white;
   }
+  @media (max-width: em(370)){
+    padding: rem(20);
+  }
 }
 
 .star {
@@ -214,6 +222,9 @@ ol {
   }
   &__alt {
     margin: 0 0 rem(36);
+    @media (max-width: em(767)){
+      margin: 0 0 rem(30);
+    }
   }
 }
 

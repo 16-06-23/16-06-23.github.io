@@ -2,8 +2,13 @@
   padding-top: rem(180);
   //position: relative;
   margin: 0 0 rem(244);
+  @media (max-width: em(767)){
+    min-height: 100vh;
+    margin: 0 0 rem(140);
+  }
   @media (max-width: em(575)){
     padding-top: rem(160);
+    margin: 0 0 rem(80);
   }
   &__wrapper {
     position: relative;

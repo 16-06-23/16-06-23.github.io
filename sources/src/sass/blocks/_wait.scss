@@ -1,5 +1,8 @@
 .wait {
   margin: 0 0 rem(73);
+  @media (max-width: em(767)){
+    margin: 0 0 rem(60);
+  }
   &__wrapper {
     width: 100%;
     display: flex;

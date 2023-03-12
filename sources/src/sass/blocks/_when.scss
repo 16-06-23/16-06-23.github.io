@@ -1,5 +1,8 @@
 .when {
   margin: 0 0 rem(145);
+  @media (max-width: em(767)){
+    margin: 0 0 rem(100);
+  }
   &__wrapper {
     width: 100%;
     display: flex;
@@ -11,8 +14,30 @@
     display: grid;
     grid-template-columns: 4fr 6fr;
     column-gap: rem(39);
+    @media (max-width: em(767)){
+      grid-template-columns: 100%;
+      grid-template-rows: min-content;
+      grid-auto-rows: min-content;
+      justify-items: center;
+      row-gap: rem(40);
+      width: 80%;
+    }
+    @media (max-width: em(575)){
+      width: 90%;
+    }
+    @media (max-width: em(420)){
+      width: 100%;
+    }
+  }
+  &__visual {
+    img {
+      object-fit: contain;
+    }
   }
   &__content {
     padding-top: rem(133);
+    @media (max-width: em(767)){
+      padding-top: rem(80);
+    }
   }
 }
