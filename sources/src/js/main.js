@@ -148,27 +148,52 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // WHEN
 
-  //const whenTl = gsap.timeline();
+  const whenTl = gsap.timeline();
 
-  //whenTl.from(".when h2", {
-  //  x: "-50%",
-  //  opacity: 0,
-  //}, '<.2');
-  //whenTl.from(".when .section__info", {
-  //  x: "-50%",
-  //  opacity: 0,
-  //}, '<.2');
-  //whenTl.from(".when .section__alt", {
-  //  x: "-50%",
-  //  opacity: 0,
-  //}, '<.2');
+  const whenContent = document.querySelector(".when__content");
+  const whenImage = document.querySelector(".when__visual");
 
-  //ScrollTrigger.create({
-  //  trigger: ".when__content",
-  //  start: "bottom 80%",
-  //  end: "bottom 80%",
-  //  animation: whenTl
-  //})
+  whenTl.from(whenContent, {
+    x: "100%",
+    opacity: 0,
+  });
+  whenTl.from(whenImage, {
+    rotate: 720,
+    scale: 0,
+    opacity: 0,
+  }, '<');
+
+  ScrollTrigger.create({
+    trigger: ".when__content",
+    start: "top 80%",
+    end: "center center",
+    scrub: true,
+    animation: whenTl
+  })
+  // WHERE
+
+  const whereTl = gsap.timeline();
+
+  const whereContent = document.querySelector(".where__content");
+  const whereImage = document.querySelector(".where__visual");
+
+  whereTl.from(whereContent, {
+    x: "-100%",
+    opacity: 0,
+  });
+  whereTl.from(whereImage, {
+    rotate: 720,
+    scale: 0,
+    opacity: 0,
+  }, '<');
+
+  ScrollTrigger.create({
+    trigger: ".where__content",
+    start: "top 80%",
+    end: "center center",
+    scrub: true,
+    animation: whereTl
+  })
 
   // CLOTHES
   const splitClothesTitle = new SplitText(".clothes__wrapper h2", {
