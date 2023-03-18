@@ -1054,6 +1054,7 @@ header {
   padding-top: 44.3%
 }
 .clothes__image img {
+  pointer-events: none;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
