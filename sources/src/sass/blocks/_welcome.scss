@@ -39,6 +39,7 @@
       width: 150%;
       right: 0;
       top: rem(-100);
+      filter: blur(30px);
     }
     @media (max-width: em(575)){
       width: rem(800);
