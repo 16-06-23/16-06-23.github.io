@@ -577,7 +577,9 @@ header {
   .welcome__blob {
     width: 150%;
     right: 0;
-    top: -6.25rem
+    top: -6.25rem;
+    -webkit-filter: blur(30px);
+    filter: blur(30px)
   }
 }
 @media (max-width:35.9375em) {
