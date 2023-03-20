@@ -553,12 +553,9 @@ header {
 .welcome__blob {
   position: absolute;
   width: 93%;
-  background: linear-gradient(286.83deg,#ffcf00 7.98%,#ff7a4e 52.34%,#ff697c 92.3%);
   border-radius: 50%;
   top: -4.625rem;
   right: 13%;
-  -webkit-filter: blur(60px);
-  filter: blur(60px);
   -webkit-transform: matrix(-.91,.42,.42,.91,0,0);
   transform: matrix(-.91,.42,.42,.91,0,0);
   z-index: -1
@@ -567,6 +564,17 @@ header {
   content: "";
   display: block;
   padding-top: 74%
+}
+.welcome__blob img {
+  position: absolute;
+  -o-object-fit: cover;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 128%;
+  height: 128%
 }
 @media (max-width:61.9375em) {
   .welcome__blob {
@@ -577,9 +585,7 @@ header {
   .welcome__blob {
     width: 150%;
     right: 0;
-    top: -6.25rem;
-    -webkit-filter: blur(30px);
-    filter: blur(30px)
+    top: -6.25rem
   }
 }
 @media (max-width:35.9375em) {
